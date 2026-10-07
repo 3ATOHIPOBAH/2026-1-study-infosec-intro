@@ -1,8 +1,10 @@
 ---
 ## Author
 author:
-  name: Архипов Александр
-  email: 132239106@rudn.ru
+  name: Архипов Александр Сергеевич
+  email: 1132239106@rudn.ru
+  group: НБИбд-01-24
+  student-id: "1132239106"
   affiliation:
     - name: Российский университет дружбы народов
       country: Российская Федерация
@@ -53,11 +55,11 @@ $$C_2 = P_2 \oplus K$$
 $$C_1 \oplus C_2 = P_1 \oplus  K \oplus  P_2 \oplus  K = P_1 \oplus P_2$$
 
 Предположим, что одна из телеграмм является шаблоном — т.е. имеет текст фиксированный формат, в который вписываются значения полей.
-Допустим, что злоумышленнику этот формат известен. 
+Допустим, что злоумышленнику этот формат известен.
 Тогда он получает достаточно много пар $C_1 \oplus C_2$ (известен вид обеих шифровок).
 Тогда зная $P_1$ имеем:
 
-$$C_1 \oplus C_2 \oplus P_1 = P_1 \oplus P_2 \oplus P_1 = P_2$$ 
+$$C_1 \oplus C_2 \oplus P_1 = P_1 \oplus P_2 \oplus P_1 = P_2$$
 
 Таким образом, злоумышленник получает возможность определить те символы сообщения $P_2$, которые находятся на позициях известного шаблона сообщения $P_1$.
 В соответствии с логикой сообщения $P_2$, злоумышленник имеет реальный шанс узнать ещё некоторое количество символов сообщения $P_2$.
@@ -66,103 +68,54 @@ $$C_1 \oplus C_2 \oplus P_1 = P_1 \oplus P_2 \oplus P_1 = P_2$$
 
 # Выполнение работы
 
-## Реализация взломщика, шифратора и дешифратора на Python
+Программа запущена как Python-файл в настоящем терминале Ubuntu, без Jupyter. Используется XOR байтов UTF-8 и ключ secrets.token_bytes. Обе строки имеют длину 25 байт. Повторение ключа в двух сообщениях используется только в учебном примере атаки. Шифротексты меняются при каждом новом запуске.
 
-```
-a = ord("а")
-liters = [chr(i) for i in range(a, a + 32)]
-a = ord("0")
-for i in range(a, a+10):
-    liters.append(chr(i))
+## Реализация XOR и учебной атаки при повторении ключа
 
-a = ord("А")
-for i in range(1040, 1072):
-    liters.append(chr(i))
-
-P1 = "КодофаяФраза1"
-P2 = "Безопасность2"
-
-def vzlom(P1, P2):
-    code = []
-    for i in range(len(P1)):
-        code.append(liters[(liters.index(P1[i]) + liters.index(P2[i])) % len(liters)])
-    print(code)
-    pr = "".join(code)
-    print(pr)
-```
-
-```
-def shifr(P1, gamma):
-    dicts = {"а": 1, "б": 2, "в": 3, "г": 4, "д": 5, "е": 6, "ё": 7, "ж": 8, "з": 9, "и": 10, "й": 11, "к": 12, "л": 13,
-             "м": 14, "н": 15, "о": 16, "п": 17, "р": 18, "с": 19, "т": 20, "у": 21, "ф": 22, "х": 23, "ц": 24, "ч": 25, 
-             "ш": 26, "щ": 27, "ъ": 28, "ы": 29, "ь": 30, "э": 31, "ю": 32, "я": 32, "А":33 , "Б": 34, "В": 35 , "Г":36, 
-             "Д":37 , "Е":38 , "Ё":39 , "Ж":40 , "З":41, "И":42,"Й":43 , "К":44 , "Л":45 , "М":46 , "Н":47 , "О":48 , 
-             "П":49 , "Р":50 , "С":51 , "Т":52 , "У":53 , "Ф":54 , "Х":55 , "Ц":56 , "Ч":57 , "Ш":58,"Щ":59 , "Ъ":60 , 
-             "Ы":61 , "Ь":62 , "Э":63 , "Ю":64 , "Я":65 , "1":66 , "2":67 , "3":68 , "4":69 , "5":70 , "6":71 , "7": 72, 
-             "8":73 , "9":74 , "0":75
-    }
-    
-    dicts2 = {v: k for k, v in dicts.items()}
-    text = P1
-    digits_text = []
-    digits_gamma = []
-
-    for i in text:
-        digits_text.append(dicts[i])
-    print("Числа текста ", digits_text)
-    
-    for i in gamma:
-        digits_gamma.append(dicts[i])
-    print("Числа гаммы ", digits_gamma)
-    
-    digits_result = []
-    ch = 0
-    for i in text:
-        try:
-            a = dicts[i] + digits_gamma[ch]
-        except:
-            ch = 0
-            a = dicts[i] + digits_gamma[ch]
-        if a > 75:
-            a = a%75
-            print(a)
-        ch += 1
-        digits_result.append(a)
-    print("Числа шифротекста ", digits_result)
-    
-    text_cr = ""
-    for i in digits_result:
-        text_cr += dicts2[i]
-    print("Шифротекст ", text_cr)
-    
-    digits = []
-    for i in text_cr:
-        digits.append(dicts[i])
-    ch = 0
-    digits1 = []
-    for i in digits:
-        try:
-            a = i - digits_gamma[ch]
-        except:
-            ch = 0
-            a = i - digits_gamma[ch]
-        if a < 1:
-            a = 75 + a
-        digits1.append(a)
-        ch += 1
-    
-    text_decr = ""
-    for i in digits1:
-        text_decr += dicts2[i]
-    print("Расшифрованный текст: ", text_decr)
+```python
+import secrets
+import sys
+def xor(a, b):
+    if len(a) != len(b):
+        raise ValueError('Длины байтовых строк должны совпадать')
+    return bytes(x ^ y for x, y in zip(a, b))
+p1 = 'КодоваяФраза1'.encode('utf-8')
+p2 = 'Безопасность2'.encode('utf-8')
+assert len(p1) == len(p2)
+key = secrets.token_bytes(len(p1))
+c1, c2 = xor(p1, key), xor(p2, key)
+print('Архипов Александр Сергеевич | НБИбд-01-24')
+print('P1:', p1.decode())
+print('P2:', p2.decode())
+print('Длина в байтах:', len(p1))
+print('C1 (hex):', c1.hex())
+print('C2 (hex):', c2.hex())
+if len(sys.argv) > 1 and sys.argv[1] == 'attack':
+    recovered_key = xor(c1, p1)
+    recovered_p2 = xor(xor(c1, c2), p1)
+    assert recovered_key == key
+    assert recovered_p2 == p2
+    print('Восстановленный P2 из C1, C2 и известного P1:', recovered_p2.decode())
+    print('Восстановление ключа по известному P1: OK')
+else:
+    d1, d2 = xor(c1, key), xor(c2, key)
+    assert d1 == p1 and d2 == p2
+    print('Расшифрованный P1:', d1.decode())
+    print('Расшифрованный P2:', d2.decode())
+    print('Точное восстановление обоих сообщений: OK')
 ```
 
-## Контрольный пример
+## атака на повторно использованный XOR-ключ
 
-![Работа алгоритма взлома ключа](image/01.png){ #fig:001 width=70% height=70%}
+При одном ключе C1 XOR C2 XOR P1 восстанавливает P2; C1 XOR P1 восстанавливает ключ. Обе проверки assert прошли. Шифротексты меняются при новом запуске.
 
-![Работа алгоритма шифрования и дешивровки](image/02.png){ #fig:002 width=70% height=70%}
+![атака на повторно использованный XOR-ключ](image/01.jpg){#fig-real-001 width=95%}
 
+## точное XOR-шифрование и расшифровка UTF-8
+
+XOR применяется к байтам UTF-8; обе фразы имеют длину 25 байт. Обратное преобразование восстанавливает каждую фразу точно, без замены букв. Здесь новый случайный ключ, отличный от снимка атаки.
+
+![точное XOR-шифрование и расшифровка UTF-8](image/02.jpg){#fig-real-002 width=95%}
 
 # Выводы
 

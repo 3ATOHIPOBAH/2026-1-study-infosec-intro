@@ -1,8 +1,10 @@
 ---
 ## Author
 author:
-  name: Архипов Александр
-  email: 132239106@rudn.ru
+  name: Архипов Александр Сергеевич
+  email: 1132239106@rudn.ru
+  group: НБИбд-01-24
+  student-id: "1132239106"
   affiliation:
     - name: Российский университет дружбы народов
       country: Российская Федерация
@@ -43,66 +45,38 @@ license: "CC BY"
 
 # Выполнение работы
 
-## Реализация шифратора и дешифратора Python
+Программа запущена как Python-файл в настоящем терминале Ubuntu, без Jupyter. Используется единый алфавит из 33 русских букв с номерами 0–32. Это сложение и вычитание по модулю 33. Восстановление текста и проверка полного алфавита выполнены успешно.
 
-```
-def main(text, gamma):
-    dict = {"а" :1, "б" :2 , "в" :3 ,"г" :4 ,"д" :5 ,"е" :6 ,"ё" :7 ,"ж": 8, "з": 9, "и": 10, "й": 11, "к": 12, "л": 13,
-            "м": 14, "н": 15, "о": 16, "п": 17,
-            "р": 18, "с": 19, "т": 20, "у": 21, "ф": 22, "х": 23, "ц": 24, "ч": 25, "ш": 26, "щ": 27, "ъ": 28,
-            "ы": 29, "ь": 30, "э": 31, "ю": 32, "я": 32
-            }
-    dict2 = {v: k for k, v in dict.items()}
-    digits_text = list()
-    digits_gamma = list()
-    
-    for i in text:
-        digits_text.append(dict[i])
-    print("Числа текста: ", digits_text)
-    
-    for i in gamma:
-        digits_gamma.append(dict[i])
-    print("Числа гаммы: ", digits_gamma)
-    
-    digits_res = list()
-    ch = 0
-    for i in text:
-        try:
-            a = dict[i] + digits_gamma[ch]
-        except:
-            ch = 0
-            a = dict[i] + digits_gamma[ch]
-        if a>=33:
-            a = a%33
-        ch += 1
-        digits_res.append(a)
-    print("Числа шифровки: ", digits_res)
-        
-    text_enc = ""
-    for i in digits_text:
-        text_enc += dict2[i]
-    print("Шифровка: ", text_enc)
-        
-    digits = list()
-    for i in text_enc:
-        digits.append(dict[i])
-    ch = 0
-    digits1 = list()
-    for i in digits:
-        a = i - digits_gamma[ch]
-        if a < 1:
-            a = 33 + a
-        digits1.append(a)
-        ch += 1
-    text_dec = ""
-    for i in digits1:
-        text_dec += dict2[i]
-    print("Рассшифровка: ", text_dec)
+## Реализация гаммирования по модулю 33
+
+```python
+alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+indices = {ch: i for i, ch in enumerate(alphabet)}
+def transform(text, gamma, sign):
+    if not gamma:
+        raise ValueError('Гамма не должна быть пустой')
+    return ''.join(alphabet[(indices[ch] + sign * indices[gamma[i % len(gamma)]]) % len(alphabet)]
+                   for i, ch in enumerate(text))
+text = 'архиповалександр'
+gamma = 'безопасность'
+encrypted = transform(text, gamma, 1)
+decrypted = transform(encrypted, gamma, -1)
+print('Архипов Александр Сергеевич | НБИбд-01-24')
+print('Алфавит:', alphabet, '| N =', len(alphabet), '| номера 0...32')
+print('Текст:', text)
+print('Гамма:', gamma)
+print('Шифротекст:', encrypted)
+print('Расшифровка:', decrypted)
+assert decrypted == text
+assert transform(transform(alphabet, 'я', 1), 'я', -1) == alphabet
+print('Проверка восстановления: OK')
 ```
 
-## Контрольный пример
+## гаммирование по модулю 33
 
-![Работа алгоритма гаммирования](image/01.png){ #fig:001 width=70% height=70%}
+Взяты 33 уникальные русские буквы с ё, номера 0...32. Сложение/вычитание выполняется по модулю 33. Исходный текст восстанавливается точно; XOR и таблица из 44 знаков с этой программой не смешиваются.
+
+![гаммирование по модулю 33](image/01.jpg){#fig-real-001 width=95%}
 
 # Выводы
 

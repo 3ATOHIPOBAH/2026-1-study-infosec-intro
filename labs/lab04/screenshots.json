@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-07",
+  "environment": "Killercoda Ubuntu 24.04",
+  "author": "Архипов Александр Сергеевич",
+  "note": "Проверки выполнены на ext4 в Ubuntu 24.04. Установка и снятие a/i выполнены от root, проверки доступа — от guest. В конце оба временных атрибута сняты.",
+  "screenshots": [
+    {
+      "file": "01.jpg",
+      "source_file": "lab04_01.jpg",
+      "sha256": "c32d9297ddfacde4dcb194cde8447fc91ab6a9fcd9bc6ef9ac0b67c470412b3e"
+    },
+    {
+      "file": "02_guest.jpg",
+      "source_file": "lab04_02_guest.jpg",
+      "sha256": "0502cc8b39ef26e9607d52347a47b6614c093a5adf93c1c596292339bc6b79e3"
+    },
+    {
+      "file": "02.jpg",
+      "source_file": "lab04_02.jpg",
+      "sha256": "87f9b008d3a4bd19f00746b38ed6bf6c434202c6b539e20a71d7c80001a57687"
+    },
+    {
+      "file": "03.jpg",
+      "source_file": "lab04_03.jpg",
+      "sha256": "c4629c78044ced09d8daca67d195beb11f4cbef31a4aa14d3697f0e8d9e727ba"
+    },
+    {
+      "file": "04.jpg",
+      "source_file": "lab04_04.jpg",
+      "sha256": "67ba3615984a3340b95918b97144e0019c0db8551135d10530726456f959d8ab"
+    },
+    {
+      "file": "04_after.jpg",
+      "source_file": "lab04_04_after.jpg",
+      "sha256": "f3a4f490a0e84760097fb0ed781e9b1053d46cf751aab4cf7c6e331f2842a540"
+    }
+  ]
+}

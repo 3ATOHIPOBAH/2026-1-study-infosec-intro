@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-07",
+  "environment": "Killercoda Ubuntu 24.04",
+  "author": "Архипов Александр Сергеевич",
+  "note": "Новые снимки выполнены в Ubuntu 24.04 на Killercoda. Пользователь guest имеет UID/GID 1001. Учётную запись создал администратор, парольный вход заблокирован; вход выполнен через su. На снимках проверены режимы 000, 100, 200 и 300. Полная таблица 64 пар прав ниже сохранена как теоретическая таблица, её строки не подтверждены этими пятью снимками.",
+  "screenshots": [
+    {
+      "file": "01.jpg",
+      "source_file": "lab02_01.jpg",
+      "sha256": "ad5ed71db52aaa7542a7f65ebd092e16182a95de9ae4dc5d2795a127c3b4e4dc"
+    },
+    {
+      "file": "02.jpg",
+      "source_file": "lab02_02.jpg",
+      "sha256": "c8416c6776ac7484a1e21f8383ef5c38c6387ec72b594e569254ab3fc1bc8384"
+    },
+    {
+      "file": "03.jpg",
+      "source_file": "lab02_03.jpg",
+      "sha256": "0d5aa87776595025d9d9ca3791c6935d0127ec088867cab254f33969f6c10d9b"
+    },
+    {
+      "file": "04.jpg",
+      "source_file": "lab02_04.jpg",
+      "sha256": "0c954387490b0fde7e87607287d902091f75d3bac85981cb07c817b4c52f4d71"
+    },
+    {
+      "file": "05.jpg",
+      "source_file": "lab02_05.jpg",
+      "sha256": "29ef07785df3e571f4871656ae3bf27cd93d9cd69c58bd977a7b84a92aafebf1"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-07",
+  "environment": "Killercoda Ubuntu 24.04",
+  "author": "Архипов Александр Сергеевич",
+  "note": "Проверки выполнены в Ubuntu 24.04. UID/GID guest — 1001, UID/GID guest2 — 1002. У guest2 есть дополнительная группа guest. Парольный вход заблокирован, входы выполнены администратором через su. На снимках проверены каталог 000 и групповые режимы 710, 720 и 730. Полная таблица ниже содержит теоретические значения; все 64 пары прав повторно не проверялись.",
+  "screenshots": [
+    {
+      "file": "01.jpg",
+      "source_file": "lab03_01.jpg",
+      "sha256": "50b3dddeb49b1a4fa05f9d6624d70f5636e3dbcc3805190104257f63a33a7ff6"
+    },
+    {
+      "file": "02.jpg",
+      "source_file": "lab03_02.jpg",
+      "sha256": "10066d91c80373208533cc9e9fb165158d91c8b8f523530a2d39bcfe52db94a1"
+    },
+    {
+      "file": "03.jpg",
+      "source_file": "lab03_03.jpg",
+      "sha256": "b1f06a1747915642864f64b90b0df2dbf3e7b4b2ed6a2a713b9cba8c85bd4541"
+    },
+    {
+      "file": "04.jpg",
+      "source_file": "lab03_04.jpg",
+      "sha256": "754c3f54dd32cf5021a591a4caa7fdc1859c7bd1e249541eae6167f7312d1848"
+    },
+    {
+      "file": "05.jpg",
+      "source_file": "lab03_05_710.jpg",
+      "sha256": "ecd1fb48d53e7cb1d4adf2688b74807027b5a1a74b2621fb06476bfef20cfc44"
+    },
+    {
+      "file": "05_720.jpg",
+      "source_file": "lab03_05_720.jpg",
+      "sha256": "d5bf3188cc0fec233f15f2cb8af3188bf5e53dd1b66dd132fe54f54c014de6fe"
+    },
+    {
+      "file": "05_730.jpg",
+      "source_file": "lab03_05_730.jpg",
+      "sha256": "65c48865d1cb3cf44e8ec144c41d5b1b14f71618d714915adf2669f24b19e3ec"
+    }
+  ]
+}

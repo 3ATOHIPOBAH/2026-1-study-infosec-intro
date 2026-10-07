@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-07",
+  "environment": "Killercoda Ubuntu 24.04",
+  "author": "Архипов Александр Сергеевич",
+  "note": "Работа выполнена в Ubuntu 24.04 с GCC 13.3. Здесь активен AppArmor, SELinux не включён: этап setenforce 0 / Permissive не выполнялся. Опыты с UID/GID, SetUID/SetGID и Sticky-битом выполнены реально. Для Sticky-бита использован отдельный каталог /tmp/lab05-sticky; глобальные права /tmp не изменялись. После опытов временные SetUID/SetGID сняты, каталог восстановлен в режиме 1777.",
+  "screenshots": [
+    {
+      "file": "01.jpg",
+      "source_file": "lab05_01.jpg",
+      "sha256": "70010d1b7a0074e86a376ee9e23f5cea44dda23c2dc21e96606d4c14464de1f5"
+    },
+    {
+      "file": "02.jpg",
+      "source_file": "lab05_02.jpg",
+      "sha256": "edbede442f2e2c7eb78a25926e48cd1e48fb861f5f727fbe7b3330f63fe919a8"
+    },
+    {
+      "file": "03.jpg",
+      "source_file": "lab05_03.jpg",
+      "sha256": "fbecfe6033ae6789c0ea65f8b347d7caf8685bf5e46660722f53b2e8cacbea13"
+    },
+    {
+      "file": "04.jpg",
+      "source_file": "lab05_04.jpg",
+      "sha256": "c24d9ba7cab83c0837567276d7b39921d77130d76461acc9d1369fc9b5ba0e7d"
+    },
+    {
+      "file": "05.jpg",
+      "source_file": "lab05_05_setuid.jpg",
+      "sha256": "69618fccee395bdf0e5eba00a98270d568b6e0217a15358c3f189d2a5fbc4606"
+    },
+    {
+      "file": "05_setgid.jpg",
+      "source_file": "lab05_05_setgid.jpg",
+      "sha256": "74954e87f7fc143e8d16ced1dd803a8693f51d9edb0f7b80da998d1df062b2ab"
+    },
+    {
+      "file": "06.jpg",
+      "source_file": "lab05_06.jpg",
+      "sha256": "4c3ff8a39f6302bbd9d8465c6c549f5aa3619cf09207713598b352065cefa88d"
+    },
+    {
+      "file": "07_before.jpg",
+      "source_file": "lab05_07_before.jpg",
+      "sha256": "078a38b46a4ce63e6ea5a8a0aef1e95e807602c84664613b4b2725eaf34d3ba3"
+    },
+    {
+      "file": "07.jpg",
+      "source_file": "lab05_07_after.jpg",
+      "sha256": "64f8755c2d2e6f01cef9c01a2f69bdfdfcd4582ef11fce1eba86d183a7d1c318"
+    },
+    {
+      "file": "08.jpg",
+      "source_file": "lab05_08_sticky.jpg",
+      "sha256": "9edb28669413d398f4d29e42f23c8012364be2321404ba5efaa5aebe9590288f"
+    },
+    {
+      "file": "08_after.jpg",
+      "source_file": "lab05_08_after.jpg",
+      "sha256": "06b0115489d4643a1181daaeed08bdccc1499ac428086f94c41f1c9f0ac35863"
+    }
+  ]
+}

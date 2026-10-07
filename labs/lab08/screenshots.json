@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-07",
+  "environment": "Killercoda Ubuntu 24.04",
+  "author": "Архипов Александр Сергеевич",
+  "note": "Программа запущена как Python-файл в настоящем терминале Ubuntu, без Jupyter. Используется XOR байтов UTF-8 и ключ secrets.token_bytes. Обе строки имеют длину 25 байт. Повторение ключа в двух сообщениях используется только в учебном примере атаки. Шифротексты меняются при каждом новом запуске.",
+  "screenshots": [
+    {
+      "file": "01.jpg",
+      "source_file": "lab08_01.jpg",
+      "sha256": "aba68a22279d9f551e069dadc2dc12e11c3221eaddcd441ab84fc7fa5f818119"
+    },
+    {
+      "file": "02.jpg",
+      "source_file": "lab08_02.jpg",
+      "sha256": "e9622d81f6f2f802724e08cb09f8f32bcd17eced387b7ab8d807f953fdfcd01b"
+    }
+  ]
+}

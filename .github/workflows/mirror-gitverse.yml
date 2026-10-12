@@ -2,7 +2,7 @@ name: Mirror laboratory releases to GitVerse
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/mirror-gitverse.yml']
+    paths: ['.github/workflows/mirror-gitverse.yml', 'releases/mirror-gitverse.py']
   workflow_dispatch:
 permissions:
   contents: read

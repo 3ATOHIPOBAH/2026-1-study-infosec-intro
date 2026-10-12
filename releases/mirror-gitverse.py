@@ -5,7 +5,6 @@ import hashlib
 import json
 import mimetypes
 import os
-import shutil
 import subprocess
 import tempfile
 import urllib.error
@@ -51,7 +50,16 @@ def request(method, path, payload=None, content_type=None, binary=False):
     except urllib.error.HTTPError as error:
         if method == 'GET' and error.code == 404:
             return None
-        raise RuntimeError(f'GitVerse API returned HTTP {error.code} for {method} {parsed.path}') from None
+        detail = ''
+        try:
+            problem = json.loads(error.read(8192))
+            problem = problem.get('error', problem)
+            if isinstance(problem, dict):
+                detail = ': ' + str(problem.get('message', problem.get('code', '')))
+            detail = detail.replace(os.environ.get('GITVERSE_TOKEN', '<unset>'), '[redacted]')[:500]
+        except (ValueError, AttributeError):
+            pass
+        raise RuntimeError(f'GitVerse API returned HTTP {error.code} for {method} {parsed.path}{detail}') from None
     return data if binary else json.loads(data)
 
 
@@ -136,6 +144,7 @@ def mirror():
             assert not names - expected, f'{tag} has unexpected destination assets'
             for asset in release['assets']:
                 if asset['name'] not in names:
+                    print(f'{tag}: uploading {asset["name"]}', flush=True)
                     upload(target['id'], asset, temp / tag / asset['name'])
             target = request('GET', lookup)
             assets = {a['name']: a for a in target.get('assets', [])}

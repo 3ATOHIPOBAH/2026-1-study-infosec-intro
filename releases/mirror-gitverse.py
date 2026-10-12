@@ -11,6 +11,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import uuid
+import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 DESTINATION = 'aarchipov/2026-1-study-infosec-intro'
@@ -108,6 +109,36 @@ def upload(release_id, asset, path):
             payload, 'multipart/form-data; boundary=' + boundary)
 
 
+def destination_assets(release, folder):
+    assets = []
+    for original in release['assets']:
+        asset = dict(original)
+        if asset['name'].endswith('.html'):
+            html_name = asset['name']
+            asset['name'] = html_name[:-5] + '_html.zip'
+            archive = folder / asset['name']
+            entry = zipfile.ZipInfo(html_name, date_time=(2026, 1, 1, 0, 0, 0))
+            entry.compress_type = zipfile.ZIP_DEFLATED
+            entry.external_attr = 0o100644 << 16
+            with zipfile.ZipFile(archive, 'w') as output:
+                output.writestr(entry, (folder / html_name).read_bytes(), compresslevel=9)
+            with zipfile.ZipFile(archive) as check:
+                assert check.namelist() == [html_name]
+                assert hashlib.sha256(check.read(html_name)).hexdigest() == original['sha256']
+            asset['size'] = archive.stat().st_size
+            asset['sha256'] = sha(archive)
+        assets.append(asset)
+    return assets
+
+
+def destination_body(release, source):
+    html = next(a for a in release['assets'] if a['name'].endswith('.html'))
+    url = 'https://gitverse.ru/' + DESTINATION + '/content/' + release['tag'] + '/' + html['path']
+    return source['body'].rstrip() + '\n\n' + (
+        'HTML-презентация приложена отдельным ZIP: GitVerse не поддерживает HTML в ассетах релиза. '
+        f'[Презентация в HTML в репозитории]({url}).\n')
+
+
 def mirror():
     if not os.environ.get('GITVERSE_TOKEN'):
         raise RuntimeError('Add a repository Actions secret named GITVERSE_TOKEN, then rerun this workflow.')
@@ -117,6 +148,7 @@ def mirror():
     with tempfile.TemporaryDirectory(prefix='gitverse-mirror-') as temp:
         temp = Path(temp)
         github = {}
+        destination = {}
         for release in PLAN:
             tag = release['tag']
             info = json.loads(gh('release', 'view', tag, '--json', 'name,body,isDraft,isPrerelease,assets,targetCommitish').stdout)
@@ -128,35 +160,46 @@ def mirror():
             for asset in release['assets']:
                 assert sha(folder / asset['name']) == asset['sha256'], (tag, asset['name'])
             github[tag] = info
+            destination[tag] = destination_assets(release, folder)
         sync_git(temp)
         for release in PLAN:
             tag = release['tag']
             source = github[tag]
+            assets_to_copy = destination[tag]
+            body = destination_body(release, source)
             lookup = PREFIX + '/releases/tags/' + urllib.parse.quote(tag)
             target = request('GET', lookup)
             if target is None:
                 target = request('POST', PREFIX + '/releases', {
-                    'tag_name': tag, 'name': source['name'], 'body': source['body'],
+                    'tag_name': tag, 'name': source['name'], 'body': body,
                     'target_commitish': run('git', 'rev-parse', tag + '^{commit}').stdout.strip(),
                     'draft': True, 'prerelease': source['isPrerelease'], 'is_authorized_only': False})
             names = {a['name'] for a in target.get('assets', [])}
-            expected = {a['name'] for a in release['assets']}
+            expected = {a['name'] for a in assets_to_copy}
             assert not names - expected, f'{tag} has unexpected destination assets'
-            for asset in release['assets']:
+            for asset in assets_to_copy:
                 if asset['name'] not in names:
                     print(f'{tag}: uploading {asset["name"]}', flush=True)
                     upload(target['id'], asset, temp / tag / asset['name'])
             target = request('GET', lookup)
             assets = {a['name']: a for a in target.get('assets', [])}
             assert set(assets) == expected, f'{tag} is missing destination assets'
-            for asset in release['assets']:
+            for asset in assets_to_copy:
                 info = assets[asset['name']]
                 assert info['size'] == asset['size'], (tag, asset['name'])
                 downloaded = request('GET', info['browser_download_url'], binary=True)
                 assert hashlib.sha256(downloaded).hexdigest() == asset['sha256'], (tag, asset['name'])
+                if asset['name'].endswith('_html.zip'):
+                    import io
+                    original = next(a for a in release['assets'] if a['name'].endswith('.html'))
+                    with zipfile.ZipFile(io.BytesIO(downloaded)) as archive:
+                        assert archive.namelist() == [original['name']]
+                        assert hashlib.sha256(archive.read(original['name'])).hexdigest() == original['sha256']
             request('PATCH', PREFIX + f'/releases/{target["id"]}', {
-                'name': source['name'], 'body': source['body'], 'draft': False,
+                'name': source['name'], 'body': body, 'draft': False,
                 'prerelease': source['isPrerelease'], 'is_authorized_only': False})
+            published = request('GET', lookup)
+            assert not published['draft'] and published['body'] == body, tag
             print(f'{tag}: copied and verified 7 files', flush=True)
 
 

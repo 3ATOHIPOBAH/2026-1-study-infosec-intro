@@ -1,8 +1,8 @@
 name: Mirror laboratory releases to GitVerse
 on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/mirror-gitverse.yml', 'releases/mirror-gitverse.py']
+  workflow_run:
+    workflows: ['Publish laboratory releases']
+    types: [completed]
   workflow_dispatch:
 permissions:
   contents: read
@@ -11,11 +11,13 @@ concurrency:
   cancel-in-progress: false
 jobs:
   mirror:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
       GITVERSE_TOKEN: ${{ secrets.GITVERSE_TOKEN }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SOURCE_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
     steps:
       - name: Check GitVerse connection
         shell: bash
@@ -29,6 +31,6 @@ jobs:
         run: |
           set -euo pipefail
           git clone --no-checkout "https://github.com/${GITHUB_REPOSITORY}.git" .
-          git checkout --detach "$GITHUB_SHA"
+          git checkout --detach "$SOURCE_SHA"
       - name: Copy seven releases, upload 49 files, and verify their hashes
         run: python3 releases/mirror-gitverse.py

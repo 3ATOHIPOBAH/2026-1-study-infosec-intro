@@ -3,27 +3,27 @@
   "releases": [
     {
       "lab": 2,
-      "tag": "lab02-v1.0.0",
+      "tag": "lab02-v1.1.0",
       "title": "ЛР2 — Основные атрибуты доступа в Linux",
-      "notes": "Отдельные файлы лабораторной работы №2.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n",
+      "notes": "Отдельные файлы лабораторной работы №2.\n\nОтчёт оформлен по шаблону yamadharma/academic-laboratory-report-template: введение, теория, материалы и методы, выполнение, результаты, обсуждение, заключение, список литературы и приложения.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, Quarto, скриншоты, исходный код и ресурсы оформления.\n",
       "assets": [
         {
           "path": "labs/lab02/report/infosec-intro--lab02--report.md",
           "name": "LR02_report.md",
-          "sha256": "2318b73945d3f48c9ca57ba8487875cbf98b3f5df2ca9d4ffd32c3c4e6100214",
-          "size": 9135
+          "sha256": "e04998b355c3db30b324ea5601e53f8cf56787680c08cf82995300c571aae546",
+          "size": 14629
         },
         {
           "path": "labs/lab02/report/infosec-intro--lab02--report.docx",
           "name": "LR02_report.docx",
-          "sha256": "38cdb05ba20ed177b5c7a4158fd4722c0e10832849111c5aee7f115a6d6bacca",
-          "size": 133276
+          "sha256": "97b3152af80e741f86b79ffbd7ebadb5f29aa68f26076376e49760d6317467d8",
+          "size": 168551
         },
         {
           "path": "labs/lab02/report/infosec-intro--lab02--report.pdf",
           "name": "LR02_report.pdf",
-          "sha256": "ea4e93cfb4935c0eccc9fca82bf0778eb842501fdb43044888521fae9c5e3041",
-          "size": 237205
+          "sha256": "e180896249ba138b517c348fc1cb387b83b0a5481dac917fa3ce96f7f79d3630",
+          "size": 232215
         },
         {
           "path": "labs/lab02/presentation/infosec-intro--lab02--presentation.pdf",
@@ -46,34 +46,34 @@
         {
           "path": "labs/lab02/LR02_sources.zip",
           "name": "LR02_sources.zip",
-          "sha256": "80fcf59ce3501e382f8133e1e6ea6aee83c6028a01366e018074580611604026",
-          "size": 1042761
+          "sha256": "5e1bc627e6c114c881a40e2913090c0e121b31b849a5109cde5577e0cc1950b0",
+          "size": 1126338
         }
       ]
     },
     {
       "lab": 3,
-      "tag": "lab03-v1.0.0",
+      "tag": "lab03-v1.1.0",
       "title": "ЛР3 — Два пользователя и групповой доступ",
-      "notes": "Отдельные файлы лабораторной работы №3.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n",
+      "notes": "Отдельные файлы лабораторной работы №3.\n\nОтчёт оформлен по шаблону yamadharma/academic-laboratory-report-template: введение, теория, материалы и методы, выполнение, результаты, обсуждение, заключение, список литературы и приложения.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, Quarto, скриншоты, исходный код и ресурсы оформления.\n",
       "assets": [
         {
           "path": "labs/lab03/report/infosec-intro--lab03--report.md",
           "name": "LR03_report.md",
-          "sha256": "c9985caa73d1fccc25028e1d220a8f9b3021ecf7b6fa25257e4541011a5213c4",
-          "size": 13013
+          "sha256": "d0261a3fef2b4d572f43fc14ac972c96f7c55373ae515b5d9432ea4e2c10229f",
+          "size": 14797
         },
         {
           "path": "labs/lab03/report/infosec-intro--lab03--report.docx",
           "name": "LR03_report.docx",
-          "sha256": "3f2ab693c2c6661ec88b2389877cfc5886a044ff0e98cffca2e822e734bbdb15",
-          "size": 214990
+          "sha256": "7f35ecab920bbacfd04f7d8aa662e58cf879ec2fc01d1ac6529026e983c8c4ec",
+          "size": 248702
         },
         {
           "path": "labs/lab03/report/infosec-intro--lab03--report.pdf",
           "name": "LR03_report.pdf",
-          "sha256": "5535a43a1291a92ead0cfcb6343ae741ebaeb2e94720ebefca0fc4e986456d23",
-          "size": 354489
+          "sha256": "d16c077a2f5674316c53d063c90f45cb3e6a7345bc6bcf9bc6dc04807e0fec17",
+          "size": 345113
         },
         {
           "path": "labs/lab03/presentation/infosec-intro--lab03--presentation.pdf",
@@ -96,34 +96,34 @@
         {
           "path": "labs/lab03/LR03_sources.zip",
           "name": "LR03_sources.zip",
-          "sha256": "ea3f5406b7ac2b7c1d6a99174698cceb61e6185dbde3b4992611bb4fa1fcacf9",
-          "size": 1153864
+          "sha256": "f46b5db8edf550f395aa99f313954f3ee69da5afe5ba9b8c330c0282f8eca640",
+          "size": 1235222
         }
       ]
     },
     {
       "lab": 4,
-      "tag": "lab04-v1.0.0",
+      "tag": "lab04-v1.1.0",
       "title": "ЛР4 — Расширенные атрибуты файлов",
-      "notes": "Отдельные файлы лабораторной работы №4.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n",
+      "notes": "Отдельные файлы лабораторной работы №4.\n\nОтчёт оформлен по шаблону yamadharma/academic-laboratory-report-template: введение, теория, материалы и методы, выполнение, результаты, обсуждение, заключение, список литературы и приложения.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, Quarto, скриншоты, исходный код и ресурсы оформления.\n",
       "assets": [
         {
           "path": "labs/lab04/report/infosec-intro--lab04--report.md",
           "name": "LR04_report.md",
-          "sha256": "e12750947a9f62de43777c39cdb30c7e5d66f08b2062e70fb452ee7abefe0df6",
-          "size": 3170
+          "sha256": "120ef867fac7e17b73c68588988add7f72a2668f51eaf66ff7e0bb4b3550d4ce",
+          "size": 9547
         },
         {
           "path": "labs/lab04/report/infosec-intro--lab04--report.docx",
           "name": "LR04_report.docx",
-          "sha256": "0c2b29e4339c739d1a5a27e889f0a486ae02343b5eb340284ddb5db21b68769a",
-          "size": 171781
+          "sha256": "3f8b1b8445e41904d0e0580caaa06b366b8be7dfd897fd402d4533bf24016e19",
+          "size": 204431
         },
         {
           "path": "labs/lab04/report/infosec-intro--lab04--report.pdf",
           "name": "LR04_report.pdf",
-          "sha256": "725af1f2c941e9f3573602d7a1387d99e5bf993426b9793b7039daedd24aff95",
-          "size": 291058
+          "sha256": "82cf1b5c161ec519faaad436d216111e1e0b9cec2d5632078e6b7e7c2fa82a6e",
+          "size": 299393
         },
         {
           "path": "labs/lab04/presentation/infosec-intro--lab04--presentation.pdf",
@@ -146,34 +146,34 @@
         {
           "path": "labs/lab04/LR04_sources.zip",
           "name": "LR04_sources.zip",
-          "sha256": "f03d168449654d5c7c4b8ec3688a6873ea48d9b7fae3a2fd588137545cb06d19",
-          "size": 1035204
+          "sha256": "009017c03a37ae0d6cb56ab99efbfd856d6b320ecdbfe48d79826142d8d5e538",
+          "size": 1116276
         }
       ]
     },
     {
       "lab": 5,
-      "tag": "lab05-v1.0.0",
+      "tag": "lab05-v1.1.0",
       "title": "ЛР5 — SetUID, SetGID и Sticky-бит",
-      "notes": "Отдельные файлы лабораторной работы №5.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n",
+      "notes": "Отдельные файлы лабораторной работы №5.\n\nОтчёт оформлен по шаблону yamadharma/academic-laboratory-report-template: введение, теория, материалы и методы, выполнение, результаты, обсуждение, заключение, список литературы и приложения.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, Quarto, скриншоты, исходный код и ресурсы оформления.\n",
       "assets": [
         {
           "path": "labs/lab05/report/infosec-intro--lab05--report.md",
           "name": "LR05_report.md",
-          "sha256": "2eda192da56b77f5d2e028247a7a343d5fde9943b5dac69c67ff57f6b9289281",
-          "size": 6056
+          "sha256": "d68d83b0982f12d0b296f4fb2a5466627082a59b883ca27d6581e3aacb51ecf1",
+          "size": 14136
         },
         {
           "path": "labs/lab05/report/infosec-intro--lab05--report.docx",
           "name": "LR05_report.docx",
-          "sha256": "f4a71b397f5cd919fea42c223217920c2120461985d574ca398132072980133e",
-          "size": 422471
+          "sha256": "7708618a08078fcf0e776a09d706dcb9b31cfe3339dc1512c84989f1f899d872",
+          "size": 458275
         },
         {
           "path": "labs/lab05/report/infosec-intro--lab05--report.pdf",
           "name": "LR05_report.pdf",
-          "sha256": "3d8e2c3c3d3de5b19ee4b8b60bc0bded3ef84a3a6a27598f39a74acdb25ed0f0",
-          "size": 653410
+          "sha256": "42aaca0b8ae86985f8e6291da680e9998906d9d85f2461038cf1cb29e6991cb2",
+          "size": 676573
         },
         {
           "path": "labs/lab05/presentation/infosec-intro--lab05--presentation.pdf",
@@ -196,34 +196,34 @@
         {
           "path": "labs/lab05/LR05_sources.zip",
           "name": "LR05_sources.zip",
-          "sha256": "c50fec4e323f5b9253963a99beab03ec2baf4a81193f3479e342550e371568b9",
-          "size": 1538631
+          "sha256": "26eabf62f6dc33f990cb8af7c2cdbfcceee4562598b5a81565c7dadcc04dd632",
+          "size": 1622165
         }
       ]
     },
     {
       "lab": 6,
-      "tag": "lab06-v1.0.0",
+      "tag": "lab06-v1.1.0",
       "title": "ЛР6 — Знакомство с SELinux",
-      "notes": "Отдельные файлы лабораторной работы №6.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n",
+      "notes": "Отдельные файлы лабораторной работы №6.\n\nОтчёт оформлен по шаблону yamadharma/academic-laboratory-report-template: введение, теория, материалы и методы, выполнение, результаты, обсуждение, заключение, список литературы и приложения.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, Quarto, скриншоты, исходный код и ресурсы оформления.\n",
       "assets": [
         {
           "path": "labs/lab06/report/infosec-intro--lab06--report.md",
           "name": "LR06_report.md",
-          "sha256": "9423f212937cc320fe2e52a34d2a4f7a28b9a91620c2d94402a2aa2f1f55b394",
-          "size": 9148
+          "sha256": "121ebfa036e29d0f4812d5ddc562980e675b860678a514920581d0c01e0ff105",
+          "size": 11916
         },
         {
           "path": "labs/lab06/report/infosec-intro--lab06--report.docx",
           "name": "LR06_report.docx",
-          "sha256": "9edf8bce1c25661b6c506a97b148f63eb9def44bae6ce135d8907b2a1f5b5208",
-          "size": 2931577
+          "sha256": "3c2191befac53295667f6653bbf6a46e4d7dba2d8db813fd4e51342238f9cae1",
+          "size": 1549587
         },
         {
           "path": "labs/lab06/report/infosec-intro--lab06--report.pdf",
           "name": "LR06_report.pdf",
-          "sha256": "0d013fa97cabf9dfeaacd5bdcba134a324b0a5f023b687d68f64efd19295b2bf",
-          "size": 1490807
+          "sha256": "fd3270d5068027ad6075f4524d902695510933804df6915cbefebfed8f2b0e5e",
+          "size": 1507969
         },
         {
           "path": "labs/lab06/presentation/infosec-intro--lab06--presentation.pdf",
@@ -246,34 +246,34 @@
         {
           "path": "labs/lab06/LR06_sources.zip",
           "name": "LR06_sources.zip",
-          "sha256": "907dcf95b47dc7cfd54788bbb157f8751a3bfe9a8c9968422d0f13c049ee5c14",
-          "size": 3722889
+          "sha256": "00fc14feeaef23035b35df27f50ea50ee166fe68f61e9ace1ab67476b8145f25",
+          "size": 3803854
         }
       ]
     },
     {
       "lab": 7,
-      "tag": "lab07-v1.0.0",
+      "tag": "lab07-v1.1.0",
       "title": "ЛР7 — Шифр гаммирования по модулю 33",
-      "notes": "Отдельные файлы лабораторной работы №7.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n",
+      "notes": "Отдельные файлы лабораторной работы №7.\n\nОтчёт оформлен по шаблону yamadharma/academic-laboratory-report-template: введение, теория, материалы и методы, выполнение, результаты, обсуждение, заключение, список литературы и приложения.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, Quarto, скриншоты, исходный код и ресурсы оформления.\n",
       "assets": [
         {
           "path": "labs/lab07/report/infosec-intro--lab07--report.md",
           "name": "LR07_report.md",
-          "sha256": "1fc31a3993fe16ac3a0efd87071762eb70ba506ad1685575a5636bcb37826922",
-          "size": 6712
+          "sha256": "9f5ea438e794d2f3fb0fae12178e8f001c41d51b2894b01815fed1cd56223214",
+          "size": 8492
         },
         {
           "path": "labs/lab07/report/infosec-intro--lab07--report.docx",
           "name": "LR07_report.docx",
-          "sha256": "8e560bdaed998c750c791711852156c044d477e1df9600ca579161a0d224f3d7",
-          "size": 83728
+          "sha256": "ad45f9429671653ba5e9348624a0d5289de9815511670fe1df0d982df1f43750",
+          "size": 115350
         },
         {
           "path": "labs/lab07/report/infosec-intro--lab07--report.pdf",
           "name": "LR07_report.pdf",
-          "sha256": "e8f85eaff632f270952da7ee4f5859d17c85a3e0114a241c12eabb65e5f10e12",
-          "size": 181680
+          "sha256": "8713682d2256af913e4cd4ed6186538eba88af204dfbc07fd8e55db0726ca4fd",
+          "size": 184095
         },
         {
           "path": "labs/lab07/presentation/infosec-intro--lab07--presentation.pdf",
@@ -296,34 +296,34 @@
         {
           "path": "labs/lab07/LR07_sources.zip",
           "name": "LR07_sources.zip",
-          "sha256": "243ddedc74fb2e6ac1a510a9cd68a4e5125ff5e7a3db1304b54aed802ce7eba2",
-          "size": 947388
+          "sha256": "d0e6bb1cb4d674ee78a1c0a4fc972c57329603ebfd4f3e3e0490395664c6eaaf",
+          "size": 1026831
         }
       ]
     },
     {
       "lab": 8,
-      "tag": "lab08-v1.0.0",
+      "tag": "lab08-v1.1.0",
       "title": "ЛР8 — Гаммирование XOR и повторное использование ключа",
-      "notes": "Отдельные файлы лабораторной работы №8.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n",
+      "notes": "Отдельные файлы лабораторной работы №8.\n\nОтчёт оформлен по шаблону yamadharma/academic-laboratory-report-template: введение, теория, материалы и методы, выполнение, результаты, обсуждение, заключение, список литературы и приложения.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, Quarto, скриншоты, исходный код и ресурсы оформления.\n",
       "assets": [
         {
           "path": "labs/lab08/report/infosec-intro--lab08--report.md",
           "name": "LR08_report.md",
-          "sha256": "4243cda2320ce5d916fd850688800fa963bbfcd50e7c0577f389e2544a474e4e",
-          "size": 10107
+          "sha256": "36111a79318ed2ac21bbf9f5936affddaedc86e381f67ea1b499e8f797e4a015",
+          "size": 9907
         },
         {
           "path": "labs/lab08/report/infosec-intro--lab08--report.docx",
           "name": "LR08_report.docx",
-          "sha256": "3ab1eb220b96fbf23120bf84cdfba12ec9027f888d4e90879f0198eb0db58a23",
-          "size": 154561
+          "sha256": "32bca0688088721e6c73a103679ebb663350251e93e023240fa177c6d83d9b05",
+          "size": 187546
         },
         {
           "path": "labs/lab08/report/infosec-intro--lab08--report.pdf",
           "name": "LR08_report.pdf",
-          "sha256": "118480bdd2c046d8bbc9135dd0bf0dca6363d3741598bf31e4beb89e30bb73d3",
-          "size": 281015
+          "sha256": "ab76af002c172bf8dc00c846c844fc7fdbca749b7b85f312dc34cb12ad4079bb",
+          "size": 276011
         },
         {
           "path": "labs/lab08/presentation/infosec-intro--lab08--presentation.pdf",
@@ -346,8 +346,8 @@
         {
           "path": "labs/lab08/LR08_sources.zip",
           "name": "LR08_sources.zip",
-          "sha256": "060aad6c2c8637d1952e7e7fe073e6b0896c96df3aa22f592191ff6f7238a83d",
-          "size": 1038591
+          "sha256": "94c5b0bb675c224037569d2a6085d0ab2f42a529a6b0f4457ea81800372f50c9",
+          "size": 1118777
         }
       ]
     }

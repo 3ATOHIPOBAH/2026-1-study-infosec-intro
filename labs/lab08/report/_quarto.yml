@@ -1,66 +1,57 @@
 project:
-  title: "report"
-  output-dir: "_output"
-
+  title: report
+  output-dir: _output
 standalone: true
 self-contained: true
-
-## Julia support
-engine: julia
-julia:
-  exeflags: ["--project=../project"]
-
-## Generic options
 lang: ru-RU
 number-sections: true
 toc: true
-toc-title: "Содержание"
+toc-title: Содержание
 toc-depth: 2
-## Crossref customization
 crossref:
-  lof-title: "Список иллюстраций"
-  lot-title: "Список таблиц"
-  lol-title: "Листинги"
-## Bibliography
+  lof-title: Список иллюстраций
+  lot-title: Список таблиц
+  lol-title: Листинги
+  fig-title: Рисунок
+  fig-prefix: рис.
+  tbl-title: Таблица
+  tbl-prefix: табл.
 bibliography:
-  - bib/cite.bib
+- bib/cite.bib
 csl: _resources/csl/gost-r-7-0-5-2008-numeric.csl
-## Formats
 format:
-  ### Docx output format
   docx:
     toc: true
     number-sections: true
     toc-depth: 2
-  ### Pdf output format
+    reference-doc: ../../../templates/academic-report/reference.docx
   pdf:
-    # pdf-engine: xelatex
-    ### minted support
-    # filters:
-    #   - minted-quarto
     toc: true
     number-sections: true
     colorlinks: false
     toc-depth: 2
-    lof: true # List of figures
-    lot: true # List of tables
-    #### Document
+    lof: true
+    lot: true
     documentclass: scrreprt
     papersize: a4
     fontsize: 12pt
     linestretch: 1.5
-    #### Language
     babel-lang: russian
     babel-otherlangs: english
-    #### Biblatex
-    cite-method: biblatex
+    cite-method: citeproc
     biblio-style: gost-numeric
     biblatexoptions:
-      - backend=biber
-      - langhook=extras
-      - autolang=other*
-    #### Misc options
+    - backend=biber
+    - langhook=extras
+    - autolang=other*
     csquotes: true
     indent: true
     include-in-header:
-      - file: _resources/tex/preamble.tex
+    - file: _resources/tex/preamble.tex
+    pdf-engine: xelatex
+    mainfont: DejaVu Serif
+    sansfont: DejaVu Sans
+    monofont: DejaVu Sans Mono
+    keep-tex: false
+execute:
+  enabled: false

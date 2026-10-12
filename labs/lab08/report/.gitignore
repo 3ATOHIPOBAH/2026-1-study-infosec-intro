@@ -1,0 +1,9 @@
+.quarto/
+_output/
+*--report.aux
+*--report.log
+*--report.lof
+*--report.lot
+*--report.tex
+*--report.toc
+*--report.out

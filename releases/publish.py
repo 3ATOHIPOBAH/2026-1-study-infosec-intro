@@ -46,16 +46,16 @@ def main():
                 files.append(str(dest))
             notes = stage / 'release-notes.txt'
             notes.write_text(release['notes'])
-            existing = gh('release', 'view', tag, '--json', 'isDraft,targetCommitish,assets,url', check=False)
+            existing = gh('release', 'view', tag, '--json', 'isDraft,targetCommitish,assets,url,body', check=False)
             if existing.returncode == 0:
                 info = json.loads(existing.stdout)
-                assert info['targetCommitish'] == target, f'{tag} already points to a different commit'
                 if info['isDraft']:
+                    assert info['targetCommitish'] == target, f'{tag} draft points to a different commit'
                     gh('release', 'upload', tag, *files, '--clobber')
             else:
                 gh('release', 'create', tag, *files, '--target', target,
                    '--title', release['title'], '--notes-file', str(notes), '--draft', '--latest=false')
-            info = json.loads(gh('release', 'view', tag, '--json', 'isDraft,assets,url').stdout)
+            info = json.loads(gh('release', 'view', tag, '--json', 'isDraft,assets,url,body').stdout)
             expected = {a['name'] for a in release['assets']}
             assert {a['name'] for a in info['assets']} == expected, f'{tag}: incorrect asset list'
             downloaded = stage / 'download-check'
@@ -65,7 +65,9 @@ def main():
                 assert digest(downloaded / asset['name']) == asset['sha256'], f'{tag}: downloaded asset differs'
             if info['isDraft']:
                 gh('release', 'edit', tag, '--draft=false', '--latest=false')
-            print(f"Published {tag}: {info['url']} (7 verified files)", flush=True)
+            elif info['body'].rstrip() != release['notes'].rstrip():
+                gh('release', 'edit', tag, '--notes-file', str(notes))
+            print(f"Verified {tag}: {info['url']} (7 verified files)", flush=True)
 
 
 if __name__ == '__main__':

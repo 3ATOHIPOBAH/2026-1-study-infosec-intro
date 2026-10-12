@@ -205,7 +205,7 @@
       "lab": 6,
       "tag": "lab06-v1.0.0",
       "title": "ЛР6 — Знакомство с SELinux",
-      "notes": "Отдельные файлы лабораторной работы №6.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n\nИспользованы прежние материалы SELinux; новые скриншоты для ЛР6 не выполнялись. На снимках сохранено исходное имя akbelchuk.\n",
+      "notes": "Отдельные файлы лабораторной работы №6.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n",
       "assets": [
         {
           "path": "labs/lab06/report/infosec-intro--lab06--report.md",

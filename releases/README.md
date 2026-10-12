@@ -11,5 +11,3 @@
 | 6 | [lab06-v1.0.0](https://github.com/3ATOHIPOBAH/2026-1-study-infosec-intro/releases/tag/lab06-v1.0.0) |
 | 7 | [lab07-v1.0.0](https://github.com/3ATOHIPOBAH/2026-1-study-infosec-intro/releases/tag/lab07-v1.0.0) |
 | 8 | [lab08-v1.0.0](https://github.com/3ATOHIPOBAH/2026-1-study-infosec-intro/releases/tag/lab08-v1.0.0) |
-
-ЛР6 использует прежние материалы SELinux и старые скриншоты с akbelchuk.

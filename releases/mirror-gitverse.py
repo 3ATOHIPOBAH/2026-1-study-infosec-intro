@@ -2,6 +2,7 @@
 from pathlib import Path
 import argparse
 import hashlib
+import io
 import json
 import mimetypes
 import os
@@ -49,7 +50,7 @@ def request(method, path, payload=None, content_type=None, binary=False):
         with OPENER.open(req, timeout=180) as response:
             data = response.read()
     except urllib.error.HTTPError as error:
-        if method == 'GET' and error.code == 404:
+        if method == 'GET' and error.code == 404 and not binary:
             return None
         detail = ''
         try:
@@ -187,10 +188,11 @@ def mirror():
             for asset in assets_to_copy:
                 info = assets[asset['name']]
                 assert info['size'] == asset['size'], (tag, asset['name'])
-                downloaded = request('GET', info['browser_download_url'], binary=True)
+                # GitVerse added a working Public API attachment URL in September 2026.
+                download_url = info.get('url') or info['browser_download_url']
+                downloaded = request('GET', download_url, binary=True)
                 assert hashlib.sha256(downloaded).hexdigest() == asset['sha256'], (tag, asset['name'])
                 if asset['name'].endswith('_html.zip'):
-                    import io
                     original = next(a for a in release['assets'] if a['name'].endswith('.html'))
                     with zipfile.ZipFile(io.BytesIO(downloaded)) as archive:
                         assert archive.namelist() == [original['name']]

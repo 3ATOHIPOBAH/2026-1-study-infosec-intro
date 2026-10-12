@@ -1,0 +1,31 @@
+name: Publish laboratory releases
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/lab-releases.yml'
+      - 'releases/labs.json'
+      - 'releases/publish.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: laboratory-releases
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out the exact public repository commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "$GITHUB_SHA"
+          git checkout --detach FETCH_HEAD
+      - name: Publish seven separate releases and verify all files
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 releases/publish.py

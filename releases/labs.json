@@ -1,0 +1,355 @@
+{
+  "schema": 1,
+  "releases": [
+    {
+      "lab": 2,
+      "tag": "lab02-v1.0.0",
+      "title": "ЛР2 — Основные атрибуты доступа в Linux",
+      "notes": "Отдельные файлы лабораторной работы №2.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n",
+      "assets": [
+        {
+          "path": "labs/lab02/report/infosec-intro--lab02--report.md",
+          "name": "LR02_report.md",
+          "sha256": "2318b73945d3f48c9ca57ba8487875cbf98b3f5df2ca9d4ffd32c3c4e6100214",
+          "size": 9135
+        },
+        {
+          "path": "labs/lab02/report/infosec-intro--lab02--report.docx",
+          "name": "LR02_report.docx",
+          "sha256": "38cdb05ba20ed177b5c7a4158fd4722c0e10832849111c5aee7f115a6d6bacca",
+          "size": 133276
+        },
+        {
+          "path": "labs/lab02/report/infosec-intro--lab02--report.pdf",
+          "name": "LR02_report.pdf",
+          "sha256": "ea4e93cfb4935c0eccc9fca82bf0778eb842501fdb43044888521fae9c5e3041",
+          "size": 237205
+        },
+        {
+          "path": "labs/lab02/presentation/infosec-intro--lab02--presentation.pdf",
+          "name": "LR02_presentation.pdf",
+          "sha256": "4b7118a2ef0a7d293be8e258ad58f4b9c0c10fc6b015e8f95f870ec1ee3507cf",
+          "size": 252973
+        },
+        {
+          "path": "labs/lab02/presentation/infosec-intro--lab02--presentation.html",
+          "name": "LR02_presentation.html",
+          "sha256": "3fba7bbfbb90ff2541d62c015e9152bb26262e40c7f2007a4bcc280f5437c9f6",
+          "size": 4366247
+        },
+        {
+          "path": "labs/lab02/presentation/infosec-intro--lab02--presentation.md",
+          "name": "LR02_presentation.md",
+          "sha256": "e8d99490e1e2713fe37cea1f7d2dcadaf533e62c61e53a3ebba79ddc64f0f847",
+          "size": 2664
+        },
+        {
+          "path": "labs/lab02/LR02_sources.zip",
+          "name": "LR02_sources.zip",
+          "sha256": "80fcf59ce3501e382f8133e1e6ea6aee83c6028a01366e018074580611604026",
+          "size": 1042761
+        }
+      ]
+    },
+    {
+      "lab": 3,
+      "tag": "lab03-v1.0.0",
+      "title": "ЛР3 — Два пользователя и групповой доступ",
+      "notes": "Отдельные файлы лабораторной работы №3.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n",
+      "assets": [
+        {
+          "path": "labs/lab03/report/infosec-intro--lab03--report.md",
+          "name": "LR03_report.md",
+          "sha256": "c9985caa73d1fccc25028e1d220a8f9b3021ecf7b6fa25257e4541011a5213c4",
+          "size": 13013
+        },
+        {
+          "path": "labs/lab03/report/infosec-intro--lab03--report.docx",
+          "name": "LR03_report.docx",
+          "sha256": "3f2ab693c2c6661ec88b2389877cfc5886a044ff0e98cffca2e822e734bbdb15",
+          "size": 214990
+        },
+        {
+          "path": "labs/lab03/report/infosec-intro--lab03--report.pdf",
+          "name": "LR03_report.pdf",
+          "sha256": "5535a43a1291a92ead0cfcb6343ae741ebaeb2e94720ebefca0fc4e986456d23",
+          "size": 354489
+        },
+        {
+          "path": "labs/lab03/presentation/infosec-intro--lab03--presentation.pdf",
+          "name": "LR03_presentation.pdf",
+          "sha256": "dc377b90fff51e5e3db67f90929ff7bf8c8a12e6a5c176f7ce3a285aff2c0c63",
+          "size": 358228
+        },
+        {
+          "path": "labs/lab03/presentation/infosec-intro--lab03--presentation.html",
+          "name": "LR03_presentation.html",
+          "sha256": "65e384dab3df4b282d4895f2489b85858f55e941e7981319eeeef39e7d24f8e8",
+          "size": 4478445
+        },
+        {
+          "path": "labs/lab03/presentation/infosec-intro--lab03--presentation.md",
+          "name": "LR03_presentation.md",
+          "sha256": "fbac0d9f66e5d5746a2d40d985eaa49ad2c4a815d8bee2831150537c4973addc",
+          "size": 2855
+        },
+        {
+          "path": "labs/lab03/LR03_sources.zip",
+          "name": "LR03_sources.zip",
+          "sha256": "ea3f5406b7ac2b7c1d6a99174698cceb61e6185dbde3b4992611bb4fa1fcacf9",
+          "size": 1153864
+        }
+      ]
+    },
+    {
+      "lab": 4,
+      "tag": "lab04-v1.0.0",
+      "title": "ЛР4 — Расширенные атрибуты файлов",
+      "notes": "Отдельные файлы лабораторной работы №4.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n",
+      "assets": [
+        {
+          "path": "labs/lab04/report/infosec-intro--lab04--report.md",
+          "name": "LR04_report.md",
+          "sha256": "e12750947a9f62de43777c39cdb30c7e5d66f08b2062e70fb452ee7abefe0df6",
+          "size": 3170
+        },
+        {
+          "path": "labs/lab04/report/infosec-intro--lab04--report.docx",
+          "name": "LR04_report.docx",
+          "sha256": "0c2b29e4339c739d1a5a27e889f0a486ae02343b5eb340284ddb5db21b68769a",
+          "size": 171781
+        },
+        {
+          "path": "labs/lab04/report/infosec-intro--lab04--report.pdf",
+          "name": "LR04_report.pdf",
+          "sha256": "725af1f2c941e9f3573602d7a1387d99e5bf993426b9793b7039daedd24aff95",
+          "size": 291058
+        },
+        {
+          "path": "labs/lab04/presentation/infosec-intro--lab04--presentation.pdf",
+          "name": "LR04_presentation.pdf",
+          "sha256": "9d12769947ce907774a9da848ed6db1db7eead3e96a7a77c1f193f4452ff68a8",
+          "size": 279105
+        },
+        {
+          "path": "labs/lab04/presentation/infosec-intro--lab04--presentation.html",
+          "name": "LR04_presentation.html",
+          "sha256": "24497b703a6e702334dcc68edfecc3bef5f9934728e54174ecc7ad6c87fb4003",
+          "size": 4384502
+        },
+        {
+          "path": "labs/lab04/presentation/infosec-intro--lab04--presentation.md",
+          "name": "LR04_presentation.md",
+          "sha256": "14195fb56b4fce284c013186ddc680275ba66f5e176f40eea444e2c47a93a361",
+          "size": 2697
+        },
+        {
+          "path": "labs/lab04/LR04_sources.zip",
+          "name": "LR04_sources.zip",
+          "sha256": "f03d168449654d5c7c4b8ec3688a6873ea48d9b7fae3a2fd588137545cb06d19",
+          "size": 1035204
+        }
+      ]
+    },
+    {
+      "lab": 5,
+      "tag": "lab05-v1.0.0",
+      "title": "ЛР5 — SetUID, SetGID и Sticky-бит",
+      "notes": "Отдельные файлы лабораторной работы №5.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n",
+      "assets": [
+        {
+          "path": "labs/lab05/report/infosec-intro--lab05--report.md",
+          "name": "LR05_report.md",
+          "sha256": "2eda192da56b77f5d2e028247a7a343d5fde9943b5dac69c67ff57f6b9289281",
+          "size": 6056
+        },
+        {
+          "path": "labs/lab05/report/infosec-intro--lab05--report.docx",
+          "name": "LR05_report.docx",
+          "sha256": "f4a71b397f5cd919fea42c223217920c2120461985d574ca398132072980133e",
+          "size": 422471
+        },
+        {
+          "path": "labs/lab05/report/infosec-intro--lab05--report.pdf",
+          "name": "LR05_report.pdf",
+          "sha256": "3d8e2c3c3d3de5b19ee4b8b60bc0bded3ef84a3a6a27598f39a74acdb25ed0f0",
+          "size": 653410
+        },
+        {
+          "path": "labs/lab05/presentation/infosec-intro--lab05--presentation.pdf",
+          "name": "LR05_presentation.pdf",
+          "sha256": "e1cd32238fe0ac3326c05b312d17612d3664a7d2a74dfe11c913e335e509c545",
+          "size": 635437
+        },
+        {
+          "path": "labs/lab05/presentation/infosec-intro--lab05--presentation.html",
+          "name": "LR05_presentation.html",
+          "sha256": "0087fe24e8c761f7b6341fdbb5cfceb451ed7e2f5fd4eded40b114d29589241f",
+          "size": 4847956
+        },
+        {
+          "path": "labs/lab05/presentation/infosec-intro--lab05--presentation.md",
+          "name": "LR05_presentation.md",
+          "sha256": "ffdf7b4ea0cb9d88f6325b3fc4d86825d804ac7a481a429e6b0984a91ad2ea7d",
+          "size": 4652
+        },
+        {
+          "path": "labs/lab05/LR05_sources.zip",
+          "name": "LR05_sources.zip",
+          "sha256": "c50fec4e323f5b9253963a99beab03ec2baf4a81193f3479e342550e371568b9",
+          "size": 1538631
+        }
+      ]
+    },
+    {
+      "lab": 6,
+      "tag": "lab06-v1.0.0",
+      "title": "ЛР6 — Знакомство с SELinux",
+      "notes": "Отдельные файлы лабораторной работы №6.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n\nИспользованы прежние материалы SELinux; новые скриншоты для ЛР6 не выполнялись. На снимках сохранено исходное имя akbelchuk.\n",
+      "assets": [
+        {
+          "path": "labs/lab06/report/infosec-intro--lab06--report.md",
+          "name": "LR06_report.md",
+          "sha256": "9423f212937cc320fe2e52a34d2a4f7a28b9a91620c2d94402a2aa2f1f55b394",
+          "size": 9148
+        },
+        {
+          "path": "labs/lab06/report/infosec-intro--lab06--report.docx",
+          "name": "LR06_report.docx",
+          "sha256": "9edf8bce1c25661b6c506a97b148f63eb9def44bae6ce135d8907b2a1f5b5208",
+          "size": 2931577
+        },
+        {
+          "path": "labs/lab06/report/infosec-intro--lab06--report.pdf",
+          "name": "LR06_report.pdf",
+          "sha256": "0d013fa97cabf9dfeaacd5bdcba134a324b0a5f023b687d68f64efd19295b2bf",
+          "size": 1490807
+        },
+        {
+          "path": "labs/lab06/presentation/infosec-intro--lab06--presentation.pdf",
+          "name": "LR06_presentation.pdf",
+          "sha256": "2ffe388549053aacbbb5cdd5e0c151021c2436dbe4d7619b65355d9144ce96cf",
+          "size": 1215177
+        },
+        {
+          "path": "labs/lab06/presentation/infosec-intro--lab06--presentation.html",
+          "name": "LR06_presentation.html",
+          "sha256": "6585774ea6b7a647e0974d9acbd953917abc2638896fa0e62557a7594f2d4b35",
+          "size": 5873803
+        },
+        {
+          "path": "labs/lab06/presentation/infosec-intro--lab06--presentation.md",
+          "name": "LR06_presentation.md",
+          "sha256": "2eef34c73900a336846711e15a227496cd80ad542d25f00bb5e6f53f16cde10e",
+          "size": 3069
+        },
+        {
+          "path": "labs/lab06/LR06_sources.zip",
+          "name": "LR06_sources.zip",
+          "sha256": "907dcf95b47dc7cfd54788bbb157f8751a3bfe9a8c9968422d0f13c049ee5c14",
+          "size": 3722889
+        }
+      ]
+    },
+    {
+      "lab": 7,
+      "tag": "lab07-v1.0.0",
+      "title": "ЛР7 — Шифр гаммирования по модулю 33",
+      "notes": "Отдельные файлы лабораторной работы №7.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n",
+      "assets": [
+        {
+          "path": "labs/lab07/report/infosec-intro--lab07--report.md",
+          "name": "LR07_report.md",
+          "sha256": "1fc31a3993fe16ac3a0efd87071762eb70ba506ad1685575a5636bcb37826922",
+          "size": 6712
+        },
+        {
+          "path": "labs/lab07/report/infosec-intro--lab07--report.docx",
+          "name": "LR07_report.docx",
+          "sha256": "8e560bdaed998c750c791711852156c044d477e1df9600ca579161a0d224f3d7",
+          "size": 83728
+        },
+        {
+          "path": "labs/lab07/report/infosec-intro--lab07--report.pdf",
+          "name": "LR07_report.pdf",
+          "sha256": "e8f85eaff632f270952da7ee4f5859d17c85a3e0114a241c12eabb65e5f10e12",
+          "size": 181680
+        },
+        {
+          "path": "labs/lab07/presentation/infosec-intro--lab07--presentation.pdf",
+          "name": "LR07_presentation.pdf",
+          "sha256": "f0c16ae1964b4c061f64b2283ac7c43a443fdff6db6262f17e27aa79a97b4758",
+          "size": 201009
+        },
+        {
+          "path": "labs/lab07/presentation/infosec-intro--lab07--presentation.html",
+          "name": "LR07_presentation.html",
+          "sha256": "616a8bda7274f75b0a1901d1199c91b73dfb675f04e5c78d614e15fec0da8cf9",
+          "size": 4279824
+        },
+        {
+          "path": "labs/lab07/presentation/infosec-intro--lab07--presentation.md",
+          "name": "LR07_presentation.md",
+          "sha256": "2546917bd5be363356971ccac235c91b6efe478a46b90fb9ec51fe139f273d9f",
+          "size": 3076
+        },
+        {
+          "path": "labs/lab07/LR07_sources.zip",
+          "name": "LR07_sources.zip",
+          "sha256": "243ddedc74fb2e6ac1a510a9cd68a4e5125ff5e7a3db1304b54aed802ce7eba2",
+          "size": 947388
+        }
+      ]
+    },
+    {
+      "lab": 8,
+      "tag": "lab08-v1.0.0",
+      "title": "ЛР8 — Гаммирование XOR и повторное использование ключа",
+      "notes": "Отдельные файлы лабораторной работы №8.\n\nОтчёт: Markdown, DOCX, PDF. Презентация: Markdown, HTML, PDF. Архив исходников включает Markdown, скриншоты и исходный код.\n",
+      "assets": [
+        {
+          "path": "labs/lab08/report/infosec-intro--lab08--report.md",
+          "name": "LR08_report.md",
+          "sha256": "4243cda2320ce5d916fd850688800fa963bbfcd50e7c0577f389e2544a474e4e",
+          "size": 10107
+        },
+        {
+          "path": "labs/lab08/report/infosec-intro--lab08--report.docx",
+          "name": "LR08_report.docx",
+          "sha256": "3ab1eb220b96fbf23120bf84cdfba12ec9027f888d4e90879f0198eb0db58a23",
+          "size": 154561
+        },
+        {
+          "path": "labs/lab08/report/infosec-intro--lab08--report.pdf",
+          "name": "LR08_report.pdf",
+          "sha256": "118480bdd2c046d8bbc9135dd0bf0dca6363d3741598bf31e4beb89e30bb73d3",
+          "size": 281015
+        },
+        {
+          "path": "labs/lab08/presentation/infosec-intro--lab08--presentation.pdf",
+          "name": "LR08_presentation.pdf",
+          "sha256": "c8dec17aa94ae621025cf7b4b2bbdae5eeea4554468cb7073ec86935b5c698de",
+          "size": 264069
+        },
+        {
+          "path": "labs/lab08/presentation/infosec-intro--lab08--presentation.html",
+          "name": "LR08_presentation.html",
+          "sha256": "cf8927dcd2adca821f6d83e1e49bb1c5f24eafa672b4303ebe0057fd237abf34",
+          "size": 4356561
+        },
+        {
+          "path": "labs/lab08/presentation/infosec-intro--lab08--presentation.md",
+          "name": "LR08_presentation.md",
+          "sha256": "a861d8e66553b1541b099c867597461c4930365c3f8d90fb4ed3bc14d22f2732",
+          "size": 3822
+        },
+        {
+          "path": "labs/lab08/LR08_sources.zip",
+          "name": "LR08_sources.zip",
+          "sha256": "060aad6c2c8637d1952e7e7fe073e6b0896c96df3aa22f592191ff6f7238a83d",
+          "size": 1038591
+        }
+      ]
+    }
+  ]
+}
